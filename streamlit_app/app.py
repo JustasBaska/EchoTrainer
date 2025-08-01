@@ -27,7 +27,7 @@ if image_files:
     image = Image.open(selected_image_path)
 
     st.session_state["current_image_path"] = selected_image_path  # Save for later use
-    st.image(image, caption=f"Memorize this shape!", use_column_width=True)
+    st.image(image, caption=f"Memorize this shape!", use_container_width=True)
 else:
     st.warning("No images found in the selected difficulty folder.")
 
@@ -39,7 +39,7 @@ difficulty_times = {'easy' : 5, 'medium' : 3, 'hard' : 2}
 
 
 if 'game_started' in st.session_state and st.session_state['game_started']:
-    st.image(image, caption = 'Memorise this!', use_column_width=True)
+    st.image(image, caption = 'Memorise this!', use_container_width=True)
 
     time.sleep(difficulty_times)
     st.empty()
@@ -70,11 +70,11 @@ if 'game_started' in st.session_state and st.session_state['game_started']:
 
             with col1:
                 st.markdown("### 🎯 Original Shape")
-                st.image(original_img, use_column_width=True)
+                st.image(original_img, use_container_width=True)
 
             with col2:
                 st.markdown("### ✏️ Your Drawing")
-                st.image(user_img, use_column_width=True)
+                st.image(user_img, use_container_width=True)
 
 
             score = compare_drawings(
