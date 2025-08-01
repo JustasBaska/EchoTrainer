@@ -8,8 +8,7 @@ from scoring import compare_drawings
 import numpy as np
 
 # --- Set up folder paths ---
-ASSETS_PATH = os.path.join(os.path.dirname(__file__), "..", "assets")
-ASSETS_PATH = os.path.abspath(ASSETS_PATH)
+ASSETS_PATH = "../assets"
 DIFFICULTY_LEVELS = ['easy', 'medium', 'hard']
 
 # --- Sidebar: Difficulty selection ---
